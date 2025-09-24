@@ -1,8 +1,10 @@
 import { NavLinks } from "../constants"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import {useGSAP} from "@gsap/react"
+import { CSSPlugin } from "gsap/CSSPlugin"
 import gsap from "gsap"
 
+gsap.registerPlugin(CSSPlugin)
 gsap.registerPlugin(ScrollTrigger)
 export default function NavBar (){
 useGSAP(()=>{
@@ -15,7 +17,7 @@ useGSAP(()=>{
 
     navTween.fromTo('nav',{ backgroundColor:'transparent'},{
             backgroundColor:'#00000050',
-            backgroundFilter:'blur(10px)',
+            backdropFilter:'blur(50px)',
             duration:1,
             ease:'power1.inOut'
         
