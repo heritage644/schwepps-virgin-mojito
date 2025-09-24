@@ -97,7 +97,7 @@ return(
 
         </div>
     </section>
-    <div className="video absolute inset-0">
+    <div className=" hidden md:block video absolute inset-0">
         <video
      
         ref={videoRef}

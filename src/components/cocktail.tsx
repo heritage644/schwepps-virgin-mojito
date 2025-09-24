@@ -29,8 +29,9 @@ gsap.timeline({
     return(
         <>
         <section id="cocktails" className="noisy">
-            <img src="/images/cocktail-left-leaf.png" alt="left-leaf" id="c-left-leaf" className=""/>
-             <img src="/images/cocktail-right-leaf.png" alt="right-leaf" id="c-right-leaf" />
+          
+            <img src="/images/cocktail-left-leaf.png" alt="left-leaf" id="c-left-leaf" className="hidden md:block"/>
+             <img src="/images/cocktail-right-leaf.png" alt="right-leaf" id="c-right-leaf" className="hidden md:block" />
 
              <div className="list">
                 <div className="popular">
