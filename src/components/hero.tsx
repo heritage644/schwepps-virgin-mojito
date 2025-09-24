@@ -46,7 +46,7 @@ gsap.timeline({
 .to('.right-leaf',{ y: 200 , }, 0,  )
 .to('.left-leaf',{ y: -200 }, 0 )
 const startValue = isMobile ? 'top-50% ': 'center-60%';
-const endValue = isMobile ?'120% top' :'bottomTop';
+const endValue = isMobile ?'120% top' :'bottom Top';
 const tl =gsap.timeline({
     scrollTrigger:{
         trigger:'video',
