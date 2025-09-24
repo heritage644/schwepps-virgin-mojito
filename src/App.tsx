@@ -6,7 +6,7 @@ function App() {
     <>
     <NavBar/>
     <Hero/>
-    <div className='h-[100vh]'></div>
+   
     </>
   )
 }
