@@ -1,7 +1,17 @@
 import { sliderLists } from "../constants"
 import React from "react"
+import gsap from "gsap"
+import { useRef } from "react";
+import { SplitText } from "gsap/SplitText"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { useMediaQuery } from "react-responsive"
+import { useGSAP } from "@gsap/react";
+gsap.registerPlugin(ScrollTrigger)
+
 export default function Menu (){
 
+
+const contentRef =useRef(null)
    
    const [currentIndex, setCurrentIndex] = React.useState(0)
 const totalCocktails = sliderLists.length;
@@ -17,6 +27,49 @@ return sliderLists[(currentIndex + indexOffset + totalCocktails)% totalCocktails
     const currenCocktail:any= getCocktailAt({indexOffset:0})
 const prevCocktail :any = getCocktailAt({indexOffset:-1})
 const nextCocktail:any = getCocktailAt({indexOffset:1})
+
+
+
+
+
+useGSAP(()=>{
+    gsap.fromTo('#title',{
+        opacity:0
+    },
+    {
+        opacity:1,
+        duration:1,
+       
+    }
+)
+
+gsap.fromTo('.cocktail',{
+    opacity:0,
+    xPercent:-100
+
+},
+{
+     opacity:1,
+     xPercent:0,
+     ease:'power1.inOut',
+     duration:1
+        
+        
+}
+)
+gsap.fromTo('.details',{
+     opacity:0,
+   
+},
+{
+ opacity:1,
+        duration:1,
+       
+}
+)
+
+
+},[currentIndex])
 
 
     return(
@@ -55,6 +108,16 @@ const nextCocktail:any = getCocktailAt({indexOffset:1})
                 </div>
                 <div className="cocktail">
                     <img src={currenCocktail.image} alt="" />
+                </div>
+                <div className="recipe ">
+                    <div ref={contentRef} className="info">
+                        <p>Recipe for: </p>
+                        <p id="title" className="pb-20">{ currenCocktail.name}</p>
+                    </div>
+                    <div className="details">
+                        <h2>{ currenCocktail.title}</h2>
+                        <p>{ currenCocktail.description}</p>
+                    </div>
                 </div>
              </div>
             </section></>

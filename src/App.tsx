@@ -5,6 +5,7 @@ import Hero from './components/hero'
 import About from './components/about'
 import Art from './components/art'
 import Menu from './components/menu'
+import Footer from './components/footer'
 function App() {
   return(
     <>
@@ -14,6 +15,7 @@ function App() {
     <About/>
    <Art/>
    <Menu/>
+   <Footer/>
 
     </>
   )
