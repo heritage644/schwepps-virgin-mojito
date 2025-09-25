@@ -2,9 +2,9 @@ import { sliderLists } from "../constants"
 import React from "react"
 import gsap from "gsap"
 import { useRef } from "react";
-import { SplitText } from "gsap/SplitText"
+
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { useMediaQuery } from "react-responsive"
+
 import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(ScrollTrigger)
 

@@ -4,7 +4,7 @@ import gsap from "gsap"
 
 import { SplitText } from "gsap/SplitText"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { useMediaQuery } from "react-responsive"
+
 import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(ScrollTrigger)
 export default function Footer (){
