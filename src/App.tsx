@@ -9,13 +9,22 @@ import Footer from './components/footer'
 function App() {
   return(
     <>
-    <NavBar/>
+    <div className="site-content">
+       <NavBar/>
     <Hero/>
     <Cocktail/>
     <About/>
    <Art/>
    <Menu/>
    <Footer/>
+    </div>
+  <div className='w-full items-center flex justify-center h-screen'>
+      <div className='small-screen-warining text-[25px] w-70  text-indigo-200 text-center '>
+      Please use a desktop or a bigger screen to view this website.
+
+    </div>
+  </div>
+   
 
     </>
   )

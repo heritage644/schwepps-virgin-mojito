@@ -368,3 +368,25 @@ body {
         }
     }
 }
+
+/* Default: hide site, show warning */
+.site-content {
+  display: none;
+}
+.small-screen-warning {
+  display: block;
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+  color: red;
+}
+
+/* Medium screens and above: show site, hide warning */
+@media (min-width: 768px) {
+  .site-content {
+    display: block;
+  }
+  .small-screen-warning {
+    display: none;
+  }
+}
