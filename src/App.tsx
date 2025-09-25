@@ -18,7 +18,7 @@ function App() {
    <Menu/>
    <Footer/>
     </div>
-  <div className='w-full items-center flex justify-center h-screen'>
+  <div className='w-full items-center flex justify-center h-screen md:hidden'>
       <div className='small-screen-warining text-[25px] w-70  text-indigo-200 text-center '>
       Please use a desktop or a bigger screen to view this website.
 
